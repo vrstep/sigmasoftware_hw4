@@ -14,5 +14,24 @@ function countVowels(string) {
   return string.match(regex).length;
 }
 
-console.log(countVowels("Ahooooj"));
-console.log(countVowels("Good Morning!"));
+// console.log(countVowels("Ahooooj"));
+// console.log(countVowels("Good Morning!"));
+
+// Task 5
+
+let colors = {
+  red: "#FF0000",
+  green: "#00FF00",
+  white: "#FFFFFF",
+};
+
+function swapKeyValue(object) {
+  const copyObj = {};
+
+  Object.entries(object).forEach(([key, value]) => {
+    copyObj[value] = key;
+  });
+  return copyObj;
+}
+
+console.log(swapKeyValue(colors));
