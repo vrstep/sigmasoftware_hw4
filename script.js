@@ -53,6 +53,12 @@ let object2 = {
   shoes: 1,
 };
 
+let object3 = {
+  shoes: 1,
+  skate: 200,
+  painting: 200,
+};
+
 function calculateDifference(object, refund) {
   let result = 0;
   for (let value of Object.values(object)) {
@@ -61,4 +67,30 @@ function calculateDifference(object, refund) {
   return result - refund;
 }
 
-console.log(calculateDifference(object2, 400));
+// console.log(calculateDifference(object2, 400));
+
+// Task 7
+
+function compareObjects(object1, object2) {
+  const entries1 = Object.entries(object1);
+  const entries2 = Object.entries(object2);
+
+  // compare length
+  if (entries1.length !== entries2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < entries1.length; i++) {
+    // compare keys
+    if (entries1[i][0] !== entries2[i][0]) {
+      return false;
+    }
+    // compare values
+    if (entries1[i][1] !== entries2[i][1]) {
+      return true;
+    }
+  }
+  return true;
+}
+
+console.log(compareObjects(object3, object2));
