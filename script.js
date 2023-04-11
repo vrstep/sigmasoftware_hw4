@@ -114,5 +114,50 @@ class Tiles {
 
 const tile1 = new Tiles("Ikea", 20, 27, "$40");
 const tile2 = new Tiles("Marjan", 23, 30, "$23");
-tile1.getData();
-tile2.getData();
+// tile1.getData();
+// tile2.getData();
+
+// Task 9
+
+class Person {
+  constructor(name, age, hobbies) {
+    this.name = name;
+    this.age = age;
+    this.hobbies = [];
+  }
+
+  sayHello() {
+    console.log(`Привет меня зовут ${this.name}, мне ${this.age} лет`);
+  }
+
+  addHobbies(hobby) {
+    this.hobbies.push(hobby);
+  }
+
+  showHobbies() {
+    console.log(this.hobbies);
+  }
+}
+
+class Child extends Person {
+  askChocolate() {
+    console.log("Buy me chocolate, bwaaah");
+  }
+
+  cry() {
+    console.log("child crying...");
+  }
+}
+
+const person1 = new Person("Hector", 29);
+person1.sayHello();
+person1.addHobbies("cooking");
+person1.addHobbies("playing computer games");
+person1.showHobbies();
+
+const child1 = new Child("Andrew", 5);
+child1.sayHello();
+child1.addHobbies("being annoying");
+child1.cry();
+child1.askChocolate();
+child1.showHobbies();
