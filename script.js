@@ -1,3 +1,15 @@
+// Task 1
+
+function stringToArray(string, number) {
+  let result;
+  if (string.length < number) {
+    result = string.split();
+  } else result = string;
+  return result;
+}
+
+console.log(stringToArray("rock", 5));
+
 // Task 2
 
 function stringEnd(string1, string2) {
@@ -204,11 +216,11 @@ class Square extends Rectangle {
 }
 
 const rectangle1 = new Rectangle("yellow", 20, 7);
-rectangle1.getArea();
-rectangle1.getPerimeter();
-rectangle1.getColor();
+// rectangle1.getArea();
+// rectangle1.getPerimeter();
+// rectangle1.getColor();
 
 const square1 = new Square("black", 50, 50);
-square1.getArea();
-square1.getPerimeter();
-square1.getColor();
+// square1.getArea();
+// square1.getPerimeter();
+// square1.getColor();
