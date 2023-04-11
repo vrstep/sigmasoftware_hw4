@@ -8,7 +8,7 @@ function stringToArray(string, number) {
   return result;
 }
 
-console.log(stringToArray("rock", 5));
+// console.log(stringToArray("rock", 5));
 
 // Task 2
 
@@ -18,6 +18,25 @@ function stringEnd(string1, string2) {
 
 // console.log(stringEnd("abc", "bc"));
 // console.log(stringEnd("abc", "d"));
+
+// Task 3
+let array1 = [2, -2, 2, -2, 2];
+let array2 = [1, 3, 5, 1, -10];
+
+function averages(array) {
+  let newArray = array
+    .map((currentValue, index, array) => {
+      if (index < array.length - 1) {
+        return (currentValue + array[index + 1]) / 2;
+      }
+    })
+    .slice(0, -1);
+
+  return newArray;
+}
+
+console.log(averages(array1));
+console.log(averages(array2));
 
 // Task 4
 
