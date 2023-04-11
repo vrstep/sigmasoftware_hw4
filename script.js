@@ -113,4 +113,6 @@ class Tiles {
 }
 
 const tile1 = new Tiles("Ikea", 20, 27, "$40");
+const tile2 = new Tiles("Marjan", 23, 30, "$23");
 tile1.getData();
+tile2.getData();
