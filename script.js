@@ -150,14 +150,65 @@ class Child extends Person {
 }
 
 const person1 = new Person("Hector", 29);
-person1.sayHello();
-person1.addHobbies("cooking");
-person1.addHobbies("playing computer games");
-person1.showHobbies();
+// person1.sayHello();
+// person1.addHobbies("cooking");
+// person1.addHobbies("playing computer games");
+// person1.showHobbies();
 
 const child1 = new Child("Andrew", 5);
-child1.sayHello();
-child1.addHobbies("being annoying");
-child1.cry();
-child1.askChocolate();
-child1.showHobbies();
+// child1.sayHello();
+// child1.addHobbies("being annoying");
+// child1.cry();
+// child1.askChocolate();
+// child1.showHobbies();
+
+// Task 10
+
+class Shape {
+  constructor(color) {
+    this.color = color;
+  }
+
+  getColor() {
+    console.log(`This shape's color is ${this.color}`);
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(color, width, height) {
+    super(color);
+    this.width = width;
+    this.height = height;
+  }
+
+  getArea() {
+    let area = this.width * this.height;
+    console.log(area);
+  }
+
+  getPerimeter() {
+    let perimeter = (this.width + this.height) * 2;
+    console.log(perimeter);
+  }
+}
+
+class Square extends Rectangle {
+  constructor(color, width, height, sideLength) {
+    super(color, width, height);
+    this.sideLength = sideLength;
+  }
+
+  showSideLength() {
+    console.log(this.sideLength);
+  }
+}
+
+const rectangle1 = new Rectangle("yellow", 20, 7);
+rectangle1.getArea();
+rectangle1.getPerimeter();
+rectangle1.getColor();
+
+const square1 = new Square("black", 50, 50);
+square1.getArea();
+square1.getPerimeter();
+square1.getColor();
