@@ -93,4 +93,24 @@ function compareObjects(object1, object2) {
   return true;
 }
 
-console.log(compareObjects(object3, object2));
+// console.log(compareObjects(object3, object2));
+
+// Task 8
+
+class Tiles {
+  constructor(brand, size_h, size_w, price) {
+    this.brand = brand;
+    this.size_h = size_h;
+    this.size_w = size_w;
+    this.price = price;
+  }
+
+  getData() {
+    console.log(
+      `The tile's brand is ${this.brand}, with sizes ${this.size_w}x${this.size_h} and the price ${this.price}`
+    );
+  }
+}
+
+const tile1 = new Tiles("Ikea", 20, 27, "$40");
+tile1.getData();
