@@ -34,4 +34,31 @@ function swapKeyValue(object) {
   return copyObj;
 }
 
-console.log(swapKeyValue(colors));
+// console.log(swapKeyValue(colors));
+
+// Task 6
+
+let object = {
+  "baseball bat": 20,
+};
+
+let object1 = {
+  skate: 10,
+  painting: 20,
+};
+
+let object2 = {
+  skate: 200,
+  painting: 200,
+  shoes: 1,
+};
+
+function calculateDifference(object, refund) {
+  let result = 0;
+  for (let value of Object.values(object)) {
+    result += value;
+  }
+  return result - refund;
+}
+
+console.log(calculateDifference(object2, 400));
